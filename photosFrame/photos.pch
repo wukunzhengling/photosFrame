@@ -1,0 +1,22 @@
+//
+//  photos.pch
+//  photosFrame
+//
+//  Created by wk on 2017/11/11.
+//  Copyright © 2017年 wk. All rights reserved.
+//
+
+#ifndef photos_pch
+#define photos_pch
+
+#import <Masonry.h>
+#import <MBProgressHUD.h>
+
+#define iOS7Later ([UIDevice currentDevice].systemVersion.floatValue >= 7.0f)
+#define iOS8Later ([UIDevice currentDevice].systemVersion.floatValue >= 8.0f)
+#define iOS9Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.0f)
+#define iOS9_1Later ([UIDevice currentDevice].systemVersion.floatValue >= 9.1f)
+
+#define Screen_W [UIScreen mainScreen].bounds.size.width
+#define Screen_H [UIScreen mainScreen].bounds.size.height
+#endif /* photos_pch */

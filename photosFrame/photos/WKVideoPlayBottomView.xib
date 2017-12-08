@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view contentMode="scaleToFill" id="iN0-l3-epB" customClass="WKVideoPlayBottomView">
+            <rect key="frame" x="0.0" y="0.0" width="467" height="44"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" adjustsImageWhenDisabled="NO" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="qnQ-iE-PtE" userLabel="playBtn">
+                    <rect key="frame" x="0.0" y="0.0" width="44" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="44" id="3M2-M4-kFq"/>
+                    </constraints>
+                    <state key="normal" image="photo.bundle/btn_video_play.png"/>
+                    <state key="selected" image="photo.bundle/btn_video_stop.png"/>
+                </button>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.00" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="PU2-ZZ-Las" userLabel="startTime">
+                    <rect key="frame" x="54" y="0.0" width="30" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="IkZ-ON-kaE"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="0.10" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="GO5-FH-Ycc" userLabel="videoTime">
+                    <rect key="frame" x="427" y="0.0" width="30" height="44"/>
+                    <constraints>
+                        <constraint firstAttribute="width" constant="30" id="3OK-R6-BSC"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                    <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                    <nil key="highlightedColor"/>
+                </label>
+                <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="fum-vg-arq">
+                    <rect key="frame" x="92" y="0.0" width="327" height="45"/>
+                </slider>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstAttribute="bottom" secondItem="fum-vg-arq" secondAttribute="bottom" id="7ja-JQ-UzQ"/>
+                <constraint firstItem="fum-vg-arq" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="8fG-RO-wnV"/>
+                <constraint firstAttribute="bottom" secondItem="PU2-ZZ-Las" secondAttribute="bottom" id="B10-BF-Qrk"/>
+                <constraint firstItem="PU2-ZZ-Las" firstAttribute="leading" secondItem="qnQ-iE-PtE" secondAttribute="trailing" constant="10" id="BBR-jO-6we"/>
+                <constraint firstAttribute="bottom" secondItem="qnQ-iE-PtE" secondAttribute="bottom" id="C4a-gX-9yJ"/>
+                <constraint firstItem="GO5-FH-Ycc" firstAttribute="leading" secondItem="fum-vg-arq" secondAttribute="trailing" constant="10" id="CFj-fd-gTI"/>
+                <constraint firstItem="fum-vg-arq" firstAttribute="leading" secondItem="PU2-ZZ-Las" secondAttribute="trailing" constant="10" id="Iqe-ds-sZT"/>
+                <constraint firstAttribute="trailing" secondItem="GO5-FH-Ycc" secondAttribute="trailing" constant="10" id="Pgy-Ai-egG"/>
+                <constraint firstItem="qnQ-iE-PtE" firstAttribute="leading" secondItem="iN0-l3-epB" secondAttribute="leading" id="Szv-2D-aZT"/>
+                <constraint firstAttribute="bottom" secondItem="GO5-FH-Ycc" secondAttribute="bottom" id="TPO-6w-4Po"/>
+                <constraint firstItem="PU2-ZZ-Las" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="ZDc-hu-NOT"/>
+                <constraint firstItem="qnQ-iE-PtE" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="hZU-1h-YAs"/>
+                <constraint firstItem="GO5-FH-Ycc" firstAttribute="top" secondItem="iN0-l3-epB" secondAttribute="top" id="sJ4-2g-nc3"/>
+            </constraints>
+            <freeformSimulatedSizeMetrics key="simulatedDestinationMetrics"/>
+            <connections>
+                <outlet property="btnPlayOrPause" destination="qnQ-iE-PtE" id="5vA-aJ-nma"/>
+                <outlet property="startTimeLabel" destination="PU2-ZZ-Las" id="wva-uK-21q"/>
+                <outlet property="videoSlider" destination="fum-vg-arq" id="ftS-5T-KUz"/>
+                <outlet property="videoTimeLabel" destination="GO5-FH-Ycc" id="Aj5-5e-bnp"/>
+            </connections>
+            <point key="canvasLocation" x="-7.5" y="1680"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="photo.bundle/btn_video_play.png" width="16" height="16"/>
+        <image name="photo.bundle/btn_video_stop.png" width="16" height="16"/>
+    </resources>
+</document>
